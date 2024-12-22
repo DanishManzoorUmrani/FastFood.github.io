@@ -1,0 +1,860 @@
+/* App.css */
+
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body{
+    background-color: #fff8f0;
+  }
+  /* Navbar styles */
+  /* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    color: white;
+    z-index: 10;
+  }
+  
+  /* Brand Name */
+  .navbar .brand-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f0ad4e; /* Golden color */
+    cursor: pointer;
+  }
+  
+  /* Navigation links */
+  .nav-links {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links ul li {
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #f0ad4e; /* Golden color on hover */
+  }
+  
+  /* Auth buttons */
+  .auth-buttons button {
+    margin-left: 20px;
+    padding: 8px 16px;
+    font-size: 16px;
+    color: white;
+    background-color: #f0ad4e;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .auth-buttons button:hover {
+    background-color: #d68f2f;
+  }
+  
+  /* Hamburger menu for small screens */
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .menu-icon .bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  /* Responsive styles for mobile devices */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .auth-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  }
+  
+  /* Styling for mobile links */
+  @media screen and (max-width: 480px) {
+    .nav-links a {
+      font-size: 16px;
+    }
+  
+    .auth-buttons button {
+      font-size: 14px;
+      padding: 6px 12px;
+    }
+  }
+  
+  
+
+  /* broust */
+  /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Broast Section Styles */
+  .broast-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff8f0; /* Light orange background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Make container full-width */
+    margin: 0 auto;
+  }
+  
+  /* Styling for text part */
+  .broast-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for heading */
+  .broast-text h1 {
+    font-size: 3em; /* Increased font size for large screens */
+    font-weight: bold;
+    color: #ff6347; /* Orange color for the heading */
+    margin-bottom: 15px;
+  }
+  
+  /* Styling for description text */
+  .broast-text p {
+    font-size: 1.2em;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  /* Button styling */
+  .order-button {
+    padding: 12px 25px;
+    background-color: #ff6347; /* Tomato Orange */
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  /* Button hover effect */
+  .order-button:hover {
+    background-color: #e53e3e; /* Darker orange on hover */
+  }
+  
+  /* Styling for image part */
+  .broast-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+  }
+  
+  /* Making the image responsive */
+  .broast-img {
+    width: 100%;
+    max-width: 450px;  /* Limit image size for better fit */
+    height: auto;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .broast-container {
+      flex-direction: column;
+      padding: 15px;
+    }
+  
+    .broast-text {
+      text-align: center;
+      padding-right: 0;
+    }
+  
+    .broast-img {
+      max-width: 100%;
+      width: 80%;  /* Make image smaller on medium screens */
+    }
+  
+    .order-button {
+      width: 100%;
+      padding: 12px 0;
+    }
+  
+    /* Increase heading font size for medium screens */
+    .broast-text h1 {
+      font-size: 2.5em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .broast-text h1 {
+      font-size: 2.2em; /* Reduce font size for mobile */
+    }
+  
+    .broast-text p {
+      font-size: 1.1em;
+    }
+  
+    .order-button {
+      font-size: 1.1em;
+    }
+  
+    /* Adjust image on smaller screens */
+    .broast-img {
+      max-width: 90%; /* Make it more flexible on small screens */
+      width: 90%; /* Make it take up more space but still fit */
+    }
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+  /* downloadand meni */
+
+  /* General reset */
+
+  
+  .download-menu-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff8f0; /* Light orange background */
+  }
+  
+  /* Download Section */
+  .download-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .download-section h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 20px;
+  }
+  
+  .download-section p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .app-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .app-link {
+    text-decoration: none;
+    padding: 12px 25px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 1.1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .app-link:hover {
+    background-color: #e53e3e;
+  }
+  
+  /* Menu Section */
+  .menu-section {
+    text-align: center;
+  }
+  
+  .menu-section h2 {
+    font-size: 2.5em;
+    color: #ff6347;
+    margin-bottom: 20px;
+  }
+  
+  .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .menu-item {
+    font-size: 1.5em;
+    color: #333;
+    padding: 15px 30px;
+    background-color: #f0ad4e;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .menu-item:hover {
+    background-color: #e39e3e;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .download-section h2,
+    .menu-section h2 {
+      font-size: 2em;
+    }
+  
+    .menu-items {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .menu-item {
+      font-size: 1.2em;
+      padding: 10px 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .download-section h2 {
+      font-size: 1.8em;
+    }
+  
+    .app-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .app-link {
+      font-size: 1em;
+      padding: 10px 20px;
+    }
+  
+    .menu-item {
+      font-size: 1.1em;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+  AlbaikBrost */
+
+
+
+
+
+
+  /* General reset */
+
+  
+  .albaik-container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #fff8f0; /* Light orange background */
+    flex-wrap: wrap;
+  }
+  
+  .albaik-image {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .albaik-image img {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+    border-radius: 10px;
+  }
+  
+  .albaik-text {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    color: #333;
+    padding-left: 20px;
+  }
+  
+  .albaik-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ff6347; /* Orange color */
+    margin-bottom: 20px;
+  }
+  
+  .albaik-text p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .order-button {
+    padding: 12px 25px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+  
+  .order-button:hover {
+    background-color: #e53e3e;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .albaik-container {
+      flex-direction: column;
+      padding: 20px;
+    }
+  
+    .albaik-text {
+      text-align: center;
+      max-width: 100%;
+      padding-left: 0;
+    }
+  
+    .albaik-image {
+      max-width: 100%;
+      margin-top: 20px;
+    }
+  
+    .albaik-text h1 {
+      font-size: 2.5em;
+    }
+  
+    .albaik-text p {
+      font-size: 1.1em;
+    }
+  
+    .order-button {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .albaik-text h1 {
+      font-size: 2.2em;
+    }
+  
+    .albaik-text p {
+      font-size: 1.1em;
+    }
+  
+    .order-button {
+      font-size: 1.1em;
+    }
+  }
+  
+
+
+
+
+
+
+
+  /* Exclusive order */
+
+
+  /* General reset */
+
+  /* Container for the deals section */
+  .deals-container {
+  
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff8f0; /* Light orange background */
+    max-width: 1200px;
+    margin: 100px auto;
+  }
+  
+  /* Heading for the deals section */
+  .deals-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ff6347; /* Orange color for the heading */
+    margin-bottom: 20px;
+  }
+  
+  /* Button to view all menu */
+  .view-menu-btn {
+    padding: 12px 25px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-menu-btn:hover {
+    background-color: #e53e3e;
+  }
+  
+  /* Flexbox container for the deals */
+  .deals {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  /* Styling for individual deal item */
+  .deal-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    flex: 1 1 45%; /* Ensures each deal takes up 45% width */
+    transition: transform 0.3s ease;
+  }
+  
+  .deal-item:hover {
+    transform: translateY(-10px); /* Adds hover effect to lift the item */
+  }
+  
+  .deal-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .deal-item h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .price {
+    font-size: 1.5em;
+    color: #ff6347;
+    margin-bottom: 20px;
+  }
+  
+  .order-btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .order-btn:hover {
+    background-color: #e53e3e;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .deals {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .deal-item {
+      flex: 1 1 90%; /* Make each deal take up more space on smaller screens */
+      margin-bottom: 20px;
+    }
+  
+    .deals-heading {
+      font-size: 2em;
+    }
+  
+    .view-menu-btn {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.1em;
+    }
+  
+    .order-btn {
+      width: 100%;
+      padding: 12px;
+      font-size: 1.2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .deals-heading {
+      font-size: 1.8em;
+    }
+  
+    .view-menu-btn {
+      font-size: 1em;
+    }
+  
+    .order-btn {
+      font-size: 1.1em;
+    }
+  }
+  
+
+
+
+
+
+
+
+  /* Testimonial */
+
+
+  /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container for the testimonial section */
+  .testimonial-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #fff8f0; /* Light orange background */
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Styling for the testimonial card */
+  .testimonial-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Styling for the testimonial text */
+  .testimonial-text {
+    font-size: 1.3em;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-style: italic;
+  }
+  
+  /* Styling for the testimonial author */
+  .testimonial-author {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6347; /* Tomato Orange */
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 768px) {
+    .testimonial-text {
+      font-size: 1.1em; /* Slightly smaller font on smaller screens */
+    }
+  
+    .testimonial-author {
+      font-size: 1.2em;
+    }
+  
+    .testimonial-card {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .testimonial-text {
+      font-size: 1em; /* Reduce font size for mobile */
+    }
+  
+    .testimonial-author {
+      font-size: 1.1em;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  /* Footer css */
+
+
+  /* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Footer container */
+  .footer-container {
+    background-color: #333; /* Dark background color for footer */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
+  
+  /* Footer content container */
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Footer links container */
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #ff6347; /* Orange color on hover */
+  }
+  
+  /* Footer bottom content */
+  .footer-bottom {
+    font-size: 0.9em;
+    color: #bbb;
+  }
+  
+  .footer-bottom p {
+    margin-top: 5px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .footer-links {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .footer-link {
+      font-size: 1.2em;
+    }
+  
+    .footer-bottom p {
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-link {
+      font-size: 1em;
+    }
+  
+    .footer-bottom p {
+      font-size: 0.9em;
+    }
+  }
+  
